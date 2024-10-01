@@ -1,0 +1,8 @@
+[core]
+    editor = nvim
+
+[user]
+	email = markus13671@gmail.com
+	name = Yulsar
+[init]
+	defaultBranch = master
