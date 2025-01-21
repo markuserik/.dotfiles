@@ -53,5 +53,9 @@ return {
                 cs = { 'OmniSharp' }
             }
         end
+    },
+    {
+        'neoclide/coc.nvim',
+        branch = "release"
     }
 }

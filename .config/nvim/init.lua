@@ -28,7 +28,7 @@ vim.opt.updatetime=1000
 vim.opt.number=true
 vim.opt.relativenumber=true
 
-vim.cmd('colorscheme gruvbox')
+-- vim.cmd('colorscheme gruvbox')
 
 vim.opt.autochdir=true
 
@@ -36,3 +36,23 @@ vim.keymap.set('t', '<Esc>', [[<C-\><C-n>:q<cr>]])
 -- vim.cmd('cnoreabbr <expr> ter getcmdtype() == ":" && getcmdline() == "ter" ? "ToggleTerm direction=float" : "ter"')
 vim.cmd('cnoreabbr <expr> ter getcmdtype() == ":" && getcmdline() == "ter" ? "ToggleTerm" : "ter"')
 vim.cmd('cnoreabbr <expr> dir getcmdtype() == ":" && getcmdline() == "dir" ? "Neotree" : "dir"')
+
+vim.cmd('let g:OmniSharp_server_use_net6 = 1')
+
+local keyset = vim.keymap.set
+
+function _G.check_back_space()
+    local col = vim.fn.col('.') - 1
+    return col == 0 or vim.fn.getline('.'):sub(col, col):match('%s') ~= nil
+end
+
+local opts = { silent = true, noremap = true, expr = true, replace_keycodes = false }
+keyset("i", "<TAB>", 'coc#pum#visible() ? coc#pum#next(1) : v:lua.check_back_space() ? "<TAB>" : coc#refresh()', opts)
+keyset("i", "<S-TAB>", [[coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"]], opts)
+
+vim.cmd [[
+ highlight Normal guibg=none
+ highlight NonText guibg=none
+ highlight Normal ctermbg=none
+ highlight NonText ctermbg=none
+]]
