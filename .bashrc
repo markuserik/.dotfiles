@@ -16,3 +16,10 @@ PS1='[$?][\u@\h \w${PS1_CMD1}]\$ '
 
 export PATH="/home/markus/.dotnet/:$PATH"
 export DOTNET_ROOT="/home/markus/.dotnet/"
+
+# If ~/.inputrc doesn't exist yet: First include the original /etc/inputrc
+# so it won't get overriden
+if [ ! -a ~/.inputrc ]; then echo '$include /etc/inputrc' > ~/.inputrc; fi
+
+# Add shell-option to ~/.inputrc to enable case-insensitive tab completion
+echo 'set completion-ignore-case On' >> ~/.inputrc
