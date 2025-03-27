@@ -1,5 +1,10 @@
 return {
     {
+        "vhyrro/luarocks.nvim",
+        priority = 1000,
+        config = true,
+    },
+    {
         "ellisonleao/gruvbox.nvim"
     },
     {
@@ -44,6 +49,7 @@ return {
     },
     {
         'dense-analysis/ale',
+        branch = "v4.0.x",
         config = function()
             local g = vim.g
 
