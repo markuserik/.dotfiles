@@ -28,12 +28,9 @@ vim.opt.updatetime=1000
 vim.opt.number=true
 vim.opt.relativenumber=true
 
--- vim.cmd('colorscheme gruvbox')
-
-vim.opt.autochdir=true
+-- vim.opt.autochdir=true
 
 vim.keymap.set('t', '<Esc>', [[<C-\><C-n>:q<cr>]])
--- vim.cmd('cnoreabbr <expr> ter getcmdtype() == ":" && getcmdline() == "ter" ? "ToggleTerm direction=float" : "ter"')
 vim.cmd('cnoreabbr <expr> ter getcmdtype() == ":" && getcmdline() == "ter" ? "ToggleTerm" : "ter"')
 vim.cmd('cnoreabbr <expr> dir getcmdtype() == ":" && getcmdline() == "dir" ? "Neotree" : "dir"')
 
