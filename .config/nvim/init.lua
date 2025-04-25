@@ -65,3 +65,8 @@ vim.keymap.set('n', '<leader>fh', builtin.help_tags, { desc = 'Telescope help ta
 
 -- Tab for LSP confirm
 vim.cmd('inoremap <expr> <TAB> coc#pum#visible() ? coc#_select_confirm() : "<TAB>"')
+
+require'lualine'.setup{}
+
+vim.keymap.set('n', '<leader>fm', '<cmd>Neotree float<cr>')
+vim.keymap.set('n', '<leader>fs', '<cmd>Neotree float git_status<cr>')

@@ -63,5 +63,12 @@ return {
     {
         'neoclide/coc.nvim',
         branch = "release"
+    },
+    {
+        'nvim-lualine/lualine.nvim',
+        dependencies = { 'nvim-tree/nvim-web-devicons' }
+    },
+    {
+        'airblade/vim-gitgutter'
     }
 }
