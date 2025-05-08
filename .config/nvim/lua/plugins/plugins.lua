@@ -70,5 +70,11 @@ return {
     },
     {
         'airblade/vim-gitgutter'
+    },
+    {
+        'nvim-treesitter/nvim-treesitter'
+    },
+    {
+        'folke/tokyonight.nvim'
     }
 }

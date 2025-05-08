@@ -29,6 +29,7 @@ vim.opt.number=true
 vim.opt.relativenumber=true
 
 -- vim.opt.autochdir=true
+vim.cmd('colorscheme tokyonight')
 
 vim.keymap.set('t', '<Esc>', [[<C-\><C-n>:q<cr>]])
 vim.cmd('cnoreabbr <expr> ter getcmdtype() == ":" && getcmdline() == "ter" ? "ToggleTerm" : "ter"')
@@ -67,3 +68,10 @@ require'lualine'.setup{}
 
 vim.keymap.set('n', '<leader>fm', '<cmd>Neotree float<cr>')
 vim.keymap.set('n', '<leader>fs', '<cmd>Neotree float git_status<cr>')
+vim.opt.clipboard="unnamedplus"
+
+require'nvim-treesitter.configs'.setup {
+    highlight = {
+        enable = true
+    }
+}
