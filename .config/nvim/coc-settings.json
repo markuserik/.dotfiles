@@ -1,0 +1,14 @@
+// coc-settings.json
+{
+    "[zig]": {
+        "coc.preferences.formatOnSave": false,
+        "semanticTokens.enable": true
+    },
+    
+    "languageserver": {
+        "zls": {
+            "filetypes": [ "zig", "zon" ],
+            "command": "zls"
+        }
+    }
+}

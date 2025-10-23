@@ -75,3 +75,7 @@ require'nvim-treesitter.configs'.setup {
         enable = true
     }
 }
+
+vim.g.zig_fmt_autosave = 0
+
+require'hex'.setup{}
