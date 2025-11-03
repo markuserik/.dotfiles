@@ -1,0 +1,6 @@
+require("markus.after.rose-pine")
+require("markus.after.telescope")
+require("markus.after.treesitter")
+require("markus.after.neo-tree")
+require("markus.after.coc")
+require("markus.after.lualine")
